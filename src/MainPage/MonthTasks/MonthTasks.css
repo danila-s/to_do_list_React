@@ -7,8 +7,10 @@
 }
 
 .month-task {
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
+    flex-direction: column;
     background-color: lightgrey;
     width: 300px;
     min-width: 300px;
@@ -22,11 +24,23 @@
     font-weight: bold;
     margin:15px;
     word-wrap: break-word;
+    overflow: auto;
 }
 
 .text {
     width: 90%;
     word-wrap: break-word;
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.delete-button{
+    font-size: 15px;
+    color:red;
 }
 
 
