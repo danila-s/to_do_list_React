@@ -21,7 +21,7 @@ class Panel extends React.Component {
                             <option value='day'>Сегодня</option>
                             <option value='month'>В этом месяце.</option>
                         </select></label>
-                    <textarea maxLength='70' name='task-text'></textarea>
+                    <textarea maxLength='150' name='task-text'></textarea>
                     <input type='submit'></input>
                 </form>
             </div>

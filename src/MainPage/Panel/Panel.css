@@ -15,10 +15,11 @@ form{
 }
 
 textarea{
-    width: 600px;
+    width: 400px;
     height: auto;
-    min-height: 300px;
+    min-height: 150px;
     margin: 10px;
+    font-size: 22px;
 }
 
 select{
