@@ -1,10 +1,10 @@
-const ADD_MONTH_TASK = 'ADD_MONTH_TASK';
+const ADD_NEW_TASK = 'ADD_NEW_TASK';
 
-function addMonthTask(newTask) {
+function addNewTask(task) {
     return {
-        type: ADD_MONTH_TASK,
+        type: ADD_NEW_TASK,
         payload: {
-            newTask: newTask
+            task: task
         },
     };
 }
@@ -12,4 +12,4 @@ function addMonthTask(newTask) {
 
 
 
-export { ADD_MONTH_TASK, addMonthTask }
+export { ADD_NEW_TASK, addNewTask }

@@ -1,11 +1,17 @@
 import './MainPage.css'
 import './MonthTasks/MonthTasks'
 import MonthTasks from './MonthTasks/MonthTasks'
+import DayTasks from './DayTasks/DayTasks'
+import Panel from './Panel/Panel'
 
-function MainPage (){
+function MainPage() {
 
-    return(
-        <MonthTasks />
+    return (
+        <header>
+            <MonthTasks />
+            <Panel />
+            <DayTasks />
+        </header>
     )
 }
 
