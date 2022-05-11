@@ -7,8 +7,6 @@
 }
 
 .month-task {
-    padding-left: 10px;
-    padding-right: 10px;
     display: flex;
     flex-direction: column;
     background-color: lightgrey;
