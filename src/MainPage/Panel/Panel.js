@@ -6,28 +6,45 @@ import { addNewTask } from '../../redux/actions'
 class Panel extends React.Component {
 
     state = {
-        isActive: false
+        isActive: false,
+        type: 'day',
+        text: ''
     }
 
     addNewTask = (e) => {
-        e.preventDefault();
-        const form = new FormData(e.target);
-        this.props.addNewTask({ type: form.get('task-type'), text: form.get('task-text') })
+        const { type, text } = this.state;
+        this.props.addNewTask({ type: type, text: text })
+        this.setState({type : 'day' , text : ''})
     }
 
+    changeType = (e) => {
+        this.setState({ type: e.target.value })
+    }
+
+    changeText = (e) => {
+        this.setState({ text: e.target.value })
+    }
+
+    keyPressed = (e) => {
+        if(e.keyCode === 13){
+            this.addNewTask();
+        }
+    }
+
+
     render() {
-        const { isActive } = this.state;
+        const { isActive, type, text } = this.state;
         return (
             (isActive && < div className="panel" onMouseLeave={() => { this.setState({ isActive: false }) }}>
                 <h1>Создать новую задачу</h1>
-                <form onSubmit={this.addNewTask}>
+                <form>
                     <label >Когда необходимо выполнить задачу ? :
-                        <select name="task-type">
+                        <select name="task-type" value={type} onChange={this.changeType}>
                             <option value='day'>Сегодня</option>
                             <option value='month'>В этом месяце.</option>
                         </select></label>
-                    <textarea maxLength='150' name='task-text'></textarea>
-                    <input type='submit'></input>
+                    <textarea maxLength='150' name='task-text' value={text} onChange={this.changeText} onKeyUp={this.keyPressed}></textarea>
+                    <button onClick={this.addNewTask}></button>
                 </form>
             </div > || <div className="create-new-task" onMouseEnter={() => { this.setState({ isActive: true }) }}>
                     <div >Добавить задачу</div>

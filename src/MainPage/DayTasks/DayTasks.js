@@ -12,13 +12,13 @@ class DayTasks extends React.Component {
         return (
             <div>
                 <h1>Задачи на день :</h1>
-                <div className='month-tasks-container'>
+                <div className='day-tasks-container'>
                     {dayTasks && dayTasks.map((item, index) => {
-                        return <div key={index} className='month-task'>
+                        return <div key={index} className='day-task'>
                             <div className='button-container'>
-                                <button className='delete-button' onClick={() => deleteTask(index, 'day')}>X</button>
+                                <button className='day-delete-button' onClick={() => deleteTask(index, 'day')}>X</button>
                             </div>
-                            <p className='text '>{item.text}</p>
+                            <p className='day-text '>{item.text}</p>
                         </div>
                     })}
                 </div>

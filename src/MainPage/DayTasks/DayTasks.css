@@ -1,0 +1,36 @@
+.day-task{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgreen;
+    width: 300px;
+    min-width: 300px;
+    min-height: 150px;
+    max-height: 150px;
+    height: auto;
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin:15px;
+    word-wrap: break-word;
+    overflow: auto;
+    border-radius: 5%;
+}
+
+.day-tasks-container {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.day-text {
+    width: 90%;
+    word-wrap: break-word;
+}
+
+.day-delete-button{
+    margin: 2px;
+    font-size: 15px;
+    color:red;
+}
